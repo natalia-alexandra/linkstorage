@@ -17,11 +17,15 @@ from django.contrib import admin
 from django.urls import path
 from django.conf.urls.static import static
 from django.conf import settings
+from django.urls.conf import include
 from storage import views
+from register import views as vr
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name='index'),
+    path('', include("django.contrib.auth.urls")),
+    path('register/', vr.register, name='register' ),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -7,3 +7,15 @@ body {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     background-color: rgb(242, 248, 247);
 }
+
+.btn {
+    width: 5rem;
+    margin-top: 2rem;
+    padding: 0.3rem 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    box-shadow: 1px 2px 9px -6px rgba(0,0,0,0.75);
+}

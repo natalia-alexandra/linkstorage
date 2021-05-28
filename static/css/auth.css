@@ -1,0 +1,52 @@
+.auth {
+    padding: 1rem;
+    background-color: rgb(194, 202, 223);
+}
+
+form {
+    width: 55vw;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 1rem;
+    color: rgb(87, 87, 87);
+    background-color: rgb(236, 240, 247);
+    box-shadow: -2px -1px 9px -3px rgba(0,0,0,0.75);
+    border-radius: 5px;
+}
+
+input {
+    display: block;
+    margin: 0.5rem 0;
+    padding: 0.3rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+label {
+    color: #000;
+}
+
+form p {
+    margin-top: 1rem;
+}
+
+form h2 {
+    padding-bottom: 1rem;
+    letter-spacing: 0.05em;
+    background-color: rgb(108, 115, 133);
+    color: transparent;
+    text-shadow: 2px 2px 3px rgba(255,255,255,0.5);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+}
+
+.auth-info {
+    margin: 1rem 0;
+    /* padding: 1rem 0; */
+}
+
+.helptext {
+    line-break: strict;
+}

@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block body_block %}
+
+<div class="conatainer auth">
+    <form method="POST">
+        <h2>Register</h2>
+        {% csrf_token %}
+        {{form.as_p}}
+
+        <button type="submit" class="btn btn-auth">register</button>
+    </form>
+</div>
+{% endblock %}

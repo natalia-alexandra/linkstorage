@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block body_block %}
+<div class="conatainer auth">
+    <form method="POST">
+        <h2>Login</h2>
+        {% csrf_token %}
+        {{form.as_p}}
+        <p class="auth-info">Don't have an account? Create one <a href="/register">here</a></p>
+        <button type="submit" class="btn btn-auth">submit</button>
+    </form>
+</div>
+{% endblock %}
