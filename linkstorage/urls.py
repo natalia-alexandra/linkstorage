@@ -24,8 +24,9 @@ from register import views as vr
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name='index'),
+    path('storage/', include("storage.urls")),
     path('', include("django.contrib.auth.urls")),
-    path('register/', vr.register, name='register' ),
+    path('register/', vr.register, name='register'),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
