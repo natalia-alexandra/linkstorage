@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block body_block %}
+<div class="conatainer">
+    <h2> links</h2>
+
+    {% if links %}
+    {% for link in links.all %}
+    <div class="link" id="link">
+        <h3>{{link.title}}</h3>
+        <p>{{link.description|safe|linebreaks}}</p>
+
+        {% if link.cover %}
+        <img src="{{link.cover.url}}" alt="{{link.alt}}" width="350">
+        {% else %}
+        <img src="#" alt="no image available" />
+        {% endif %}
+
+        <a href="{{link.link_path.url}}" target="_blank" class="link_path">{{link.link_path}}</a>
+
+        <p>Category: {{link.category}}</p>
+
+        {% if user.is_authenticated %}
+        <a class='btn btn-primary' href="{% url 'update_link' pk=link.pk %}">
+            edit
+            <span class="glyphicon glyphicon-pencil"></span>
+        </a>
+        <a class='btn btn-primary' href="{% url 'delete_link' pk=link.pk %}">
+            ❌
+            <span class="glyphicon glyphicon-remove"></span>
+        </a>
+        {% endif %}
+
+    </div>
+    {% endfor %}
+    {% else %}
+    <p>there are no links yet</p>
+    {% endif %}
+</div>
+{% endblock %}
