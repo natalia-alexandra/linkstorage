@@ -1,9 +1,9 @@
 {% extends "base.html" %}
 
 {% block body_block %}
-<div class="conatainer">
-    <h2>add link</h2>
+<div class="container auth">
     <form method="POST">
+        <h2>add link</h2>
         {% csrf_token %}
         {{form.as_p}}
         <input type="submit" value="add" class="btn btn-add">

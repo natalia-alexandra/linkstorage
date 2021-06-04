@@ -4,18 +4,125 @@
 }
 
 body {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Montserrat', sans-serif;
     background-color: rgb(242, 248, 247);
 }
 
+/* HEADER */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(77,69,198);
+    background: linear-gradient(90deg, rgba(77,69,198,1) 0%, rgba(79,79,201,1) 35%, rgba(30,202,237,1) 100%); 
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: auto;
+}
+.logo_img {
+    margin-right: 0.5rem;
+    text-shadow: 2px 2px 3px rgba(255,255,255,0.5);
+}
+
+/* NAVBAR */
+nav {
+    width: 98vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav a {
+    padding-right: 1rem;
+    font-size: 1.2em;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    color: #fff;
+    text-decoration: none;
+}
+.nav_items {
+    margin-left: -3rem;
+}
+.nav_auth {
+    margin-left: auto;
+}
+
+/* MAIN */
+main {
+    background: rgb(77,69,198);
+    background: linear-gradient(0deg, rgba(77,69,198,1) 0%, rgba(79,79,201,1) 17%, rgba(30,202,237,1) 100%);
+}
+
+/* LANDING PAGE */
+.grid_container {
+    padding: 1rem 0.5rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 15px;
+  
+}
+.grid_div {
+    min-height: 15vh;
+    background-color: rgba(68, 161, 248, 0.3);
+    color: rgba(182, 218, 252, 0.3);
+    text-align: center;
+}
+/* hero grid */
+.span-row-3{
+    grid-row: span 3 / auto;
+}
+.div_main_grid {
+    padding: 0.5rem;
+    color: #fff;
+}
+.div_main_grid h1 {
+    padding-bottom: 1.5rem;
+    font-weight: bold;
+}
+.div_main_grid p {
+    font-weight: 800;
+    padding-bottom: 2rem;
+}
+.hero_img {
+    width: 200px;
+    margin: 0 auto;
+}
+
+/* 
+.grid_div:nth-child(3n + 2) {
+    background-color: rgb(49, 77, 206);
+}
+.grid_div:nth-child(3n + 3) {
+    background-color: #ff9231;
+}
+.grid_div:nth-child(3n + 4) {
+    background-color: #10d863;
+} */
+
+
+/* GENERIC */
 .btn {
     width: 5rem;
     margin-top: 2rem;
     padding: 0.3rem 0.5rem;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 3px;
 }
-
 .btn:hover {
     box-shadow: 1px 2px 9px -6px rgba(0,0,0,0.75);
+}
+
+/* FOOTER */
+footer {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: rgb(215, 231, 247);
+    background: rgb(77,69,198);
+    background: linear-gradient(285deg, rgba(77,69,198,1) 0%, rgba(79,79,201,1) 35%, rgba(30,202,237,1) 100%); 
 }

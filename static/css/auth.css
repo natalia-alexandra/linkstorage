@@ -1,6 +1,7 @@
 .auth {
     padding: 1rem;
-    background-color: rgb(194, 202, 223);
+    background: rgb(77,69,198);
+    background: linear-gradient(0deg, rgba(77,69,198,1) 0%, rgba(79,79,201,1) 17%, rgba(30,202,237,1) 100%); 
 }
 
 form {
@@ -9,13 +10,26 @@ form {
     flex-direction: column;
     margin: 0 auto;
     padding: 1rem;
-    color: rgb(87, 87, 87);
+    color: rgb(24, 15, 44);
     background-color: rgb(236, 240, 247);
     box-shadow: -2px -1px 9px -3px rgba(0,0,0,0.75);
     border-radius: 5px;
 }
 
-input {
+form h2 {
+    padding-bottom: 1rem;
+    letter-spacing: 0.05em;
+    /* background-color: rgba(108, 115, 133, 0.8); */
+    background-color: #20c2ea;
+    color: transparent;
+    text-shadow: 2px 2px 3px rgba(255,255,255,0.5);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+}
+
+input[type="text"], input[type="url"], input[type="file"] {
+    width: 80%;
     display: block;
     margin: 0.5rem 0;
     padding: 0.3rem 1rem;
@@ -23,23 +37,28 @@ input {
     border-radius: 5px;
 }
 
+textarea, select, input[type="checkbox"] {
+    margin-top: 0.5rem;
+    padding: 0.3rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+textarea {
+    max-width: 80%;
+}
+
+input:focus {
+    border: 1px solid rgb(77,69,198);
+}
+
 label {
+    display: block;
     color: #000;
 }
 
 form p {
     margin-top: 1rem;
-}
-
-form h2 {
-    padding-bottom: 1rem;
-    letter-spacing: 0.05em;
-    background-color: rgb(108, 115, 133);
-    color: transparent;
-    text-shadow: 2px 2px 3px rgba(255,255,255,0.5);
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    background-clip: text;
 }
 
 .auth-info {
