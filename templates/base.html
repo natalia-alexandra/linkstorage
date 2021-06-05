@@ -17,13 +17,15 @@
     <header>
         <nav>
             <a href="{% url 'index' %}" class="logo">
-                <img src="{% static 'assets/linkstorage-logo.png' %}" alt="logo" class="logo_img">
+                <img src="{% static 'assets/logo.png' %}" alt="logo" class="logo_img">
                 LinkStorage
             </a>
+            {% if user.is_authenticated %}
             <div class="nav_items">
                 <a href="{% url 'storage' %}">storage</a>
                 <a href="{% url 'add_link' %}">add link</a>
             </div>
+            {% endif %}
             <div class="nav_auth">
                 {% if not user.is_authenticated %}
                 <a href="{% url 'login' %}">login</a>

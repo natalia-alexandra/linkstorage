@@ -37,14 +37,14 @@ nav {
 }
 nav a {
     padding-right: 1rem;
-    font-size: 1.2em;
+    font-size: 1.1em;
     font-weight: bold;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.03em;
     color: #fff;
     text-decoration: none;
 }
 .nav_items {
-    margin-left: -3rem;
+    margin-left: -3.5rem;
 }
 .nav_auth {
     margin-left: auto;
@@ -52,6 +52,7 @@ nav a {
 
 /* MAIN */
 main {
+    min-height: 80vh;
     background: rgb(77,69,198);
     background: linear-gradient(0deg, rgba(77,69,198,1) 0%, rgba(79,79,201,1) 17%, rgba(30,202,237,1) 100%);
 }
@@ -65,7 +66,7 @@ main {
   
 }
 .grid_div {
-    min-height: 15vh;
+    min-height: 12vh;
     background-color: rgba(68, 161, 248, 0.3);
     color: rgba(182, 218, 252, 0.3);
     text-align: center;
@@ -75,16 +76,20 @@ main {
     grid-row: span 3 / auto;
 }
 .div_main_grid {
-    padding: 0.5rem;
+    padding: 0.5rem 1rem;
     color: #fff;
 }
 .div_main_grid h1 {
-    padding-bottom: 1.5rem;
+    padding-bottom: 1rem;
     font-weight: bold;
+    letter-spacing: 0.03em;
 }
 .div_main_grid p {
-    font-weight: 800;
+    font-size: 1.1em;
+    font-weight: 600;
+    line-height: 1.15em;
     padding-bottom: 2rem;
+    color: #efeff0;
 }
 .hero_img {
     width: 200px;
