@@ -57,6 +57,10 @@ main {
     background: linear-gradient(0deg, rgba(77,69,198,1) 0%, rgba(79,79,201,1) 17%, rgba(30,202,237,1) 100%);
 }
 
+.container {
+    padding: 1rem;
+}
+
 /* LANDING PAGE */
 .grid_container {
     padding: 1rem 0.5rem;
@@ -110,14 +114,17 @@ main {
 
 /* GENERIC */
 .btn {
-    width: 5rem;
+    min-width: 5rem;
     margin-top: 2rem;
     padding: 0.3rem 0.5rem;
-    border: 1px solid #ccc;
+    border: 1px solid rgba(24, 82, 170, 0.5);
     border-radius: 3px;
 }
 .btn:hover {
-    box-shadow: 1px 2px 9px -6px rgba(0,0,0,0.75);
+    border-style: solid;
+    border-width: 2px;
+    border-image: linear-gradient(45deg, rgba(77,69,198,0.5), rgba(30,202,237,0.5)) 1;
+    border-radius: 5px;
 }
 
 /* FOOTER */

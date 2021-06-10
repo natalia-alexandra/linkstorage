@@ -1,0 +1,25 @@
+.storage {
+    width: 80vw;
+    margin: 0 auto;
+    padding: 1rem;
+    display: flex;
+    color: rgb(32, 32, 32);
+    background-color: rgb(250, 250, 250);
+    border-radius: 5px;
+}
+
+.storage img {
+    margin: 1rem 1rem 1rem 0;
+    border-radius: 5px;
+}
+
+.link_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.link_btns a {
+    margin-right: 1rem;
+    text-decoration: none;
+}
