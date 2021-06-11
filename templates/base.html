@@ -36,7 +36,18 @@
                 {% endif %}
             </div>
         </nav>
+        <!-- search bar -->
+        {% if user.is_authenticated %}
+        <form class="search_bar_form" method="GET" action="/search/">
+            {% csrf_token %}
+            <div class="search_bar">
+                <input type="search" name="search" placeholder="search by title">
+                <button class="btn btn_search" type="submit">🔍</button>
+            </div>
+        </form>
+        {% endif %}
     </header>
+
     <main>
         {% block body_block %}
 
