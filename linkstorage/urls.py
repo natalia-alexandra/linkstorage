@@ -25,6 +25,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name='index'),
     path('storage/', include("storage.urls")),
+    path('search/', include("search.urls")),
     path('', include("django.contrib.auth.urls")),
     path('register/', vr.register, name='register'),
 ]
