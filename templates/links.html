@@ -1,38 +1,39 @@
 {% extends "base.html" %}
-
+{% load static %}
 {% block body_block %}
-<div class="conatainer storage_container">
-    <h2> links</h2>
 
+<div class="conatainer storage_container">
+    <h2 id="top_all_links">all links</h2>
     {% if links %}
     {% for link in links.all %}
     <div class="storage" id="link">
-        <div>
-            <h3>{{link.title}}</h3>
-            <div class="link_cover">
-                {% if link.cover %}
-                <img src="{{link.cover.url}}" alt="{{link.alt}}" width="350">
-                {% else %}
-                <img src="#" alt="no image available" />
-                {% endif %}
-            </div>
+        <div class="link_cover">
+            {% if link.cover %}
+            <img src="{{link.cover.url}}" alt="{{link.alt}}" width="350" class="link_img">
+            {% else %}
+            <img src="{% static './assets/default-img.jpg' %}" alt="default image available" width="280"
+                class="link_img" />
+            {% endif %}
         </div>
         <div class="link_content">
-            <p>Category: {{link.category}}</p>
-            <p>{{link.description|safe|linebreaks}}</p>
-            <a href="{{link.link_path.url}}" target="_blank" class="link_path">{{link.link_path}}</a>
+            <h3>{{link.title}}</h3>
+            <p class="category"><i class="fas fa-hashtag category"></i> category: {{link.category}}</p>
+            <p>{{link.description|safe|linebreaks|default_if_none:'' }}</p>
+            <a href="{{link.link_path}}" target="_blank" class="link_path" rel="noopener noreferrer">
+                <i class="fas fa-external-link-alt"></i>
+                {{link.link_path|escape }}
+            </a>
             {% if user.is_authenticated %}
             <div class="link_btns">
                 <a class='btn btn-primary' href="{% url 'update_link' pk=link.pk %}">
-                    edit
+                    <i class="far fa-edit"></i> edit
                     <span class="glyphicon glyphicon-pencil"></span>
                 </a>
                 <a class='btn btn-primary' href="{% url 'delete_link' pk=link.pk %}">
-                    ❌
-                    <span class="glyphicon glyphicon-remove"></span>
+                    <i class="fas fa-trash-alt"></i> delete
                 </a>
                 <a class='btn btn-primary' href="{% url 'delete_link' pk=link.pk %}">
-                    ✨
+                    <i class="fas fa-star"></i> favorite
                     <span class="glyphicon glyphicon-remove"></span>
                 </a>
             </div>
@@ -41,7 +42,14 @@
     </div>
     {% endfor %}
     {% else %}
-    <p>there are no links yet</p>
+    <div class="msg no_result">
+        <p>there are no links yet</p>
+        <a href="{% url 'add_link' %}">add link</a>
+    </div>
     {% endif %}
+    <a href="#top_all_links">
+        <i class="icon_top_arrow far fa-caret-square-up"></i>
+    </a>
 </div>
+
 {% endblock %}

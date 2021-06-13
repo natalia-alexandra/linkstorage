@@ -2,7 +2,7 @@
 
 {% block body_block %}
 <div class="container auth">
-    <form method="POST">
+    <form method="POST" class="form">
         <h2>update link</h2>
         {% csrf_token %}
         {{updateForm.as_p}}
