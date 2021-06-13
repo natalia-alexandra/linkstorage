@@ -1,5 +1,6 @@
 from django.db import models
 from django.utils import timezone
+# from urllib.parse import urlparse
 
 
 # category
@@ -18,8 +19,9 @@ class Category(models.Model):
 class Storage(models.Model):
     author = models.ForeignKey('auth.User', on_delete=models.CASCADE)
     title = models.CharField(max_length=255)
-    description = models.TextField()
-    link_path = models.URLField(max_length=250, unique=True)
+    description = models.TextField(blank=True)
+    # link_path = models.URLField(max_length=250, unique=True)
+    link_path = models.CharField(max_length=250)
     cover = models.ImageField(upload_to='assets/', blank=True)
     cover_url = models.CharField(max_length=500, default=None, blank=True)
     alt = models.CharField(max_length=255)
@@ -30,6 +32,10 @@ class Storage(models.Model):
 
     def __str__(self):
         return self.title
+
+    # def url_text(request, self):
+    #     parsed_url = urlparse(self.link_path)
+    #     return parsed_url.hostname.replace("www.http://localhost:8000/storage/", "") + "/..."
 
 
 # favorites

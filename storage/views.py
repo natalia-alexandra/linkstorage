@@ -1,7 +1,6 @@
 from django.shortcuts import render, redirect
 from .models import Storage
 from .forms import StorageForm
-from django.views.generic import ListView
 
 
 def home(req):
