@@ -11,6 +11,7 @@ body {
 /* HEADER */
 header {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background: rgb(77,69,198);
@@ -44,7 +45,7 @@ nav a {
     text-decoration: none;
 }
 .nav_items {
-    margin-left: -3.5rem;
+    margin-left: -5rem;
 }
 .nav_auth {
     margin-left: auto;
@@ -114,10 +115,10 @@ main {
 
 /* GENERIC */
 .btn {
-    min-width: 5rem;
+    width: 5rem;
     margin-top: 2rem;
     padding: 0.3rem 0.5rem;
-    border: 1px solid rgba(24, 82, 170, 0.5);
+    border: 2px solid rgba(65, 105, 165, 0.3);
     border-radius: 3px;
 }
 .btn:hover {
@@ -125,6 +126,14 @@ main {
     border-width: 2px;
     border-image: linear-gradient(45deg, rgba(77,69,198,0.5), rgba(30,202,237,0.5)) 1;
     border-radius: 5px;
+}
+
+.icon_top_arrow {
+    position: absolute;
+    right: 1rem;
+    bottom: 0.1rem;
+    font-size: 1.8em;
+    color: rgb(243, 252, 252) !important;
 }
 
 /* FOOTER */
