@@ -17,7 +17,7 @@ def links(request):
 def add_link(req):
     form = StorageForm()
     if req.method == 'POST':
-        form = StorageForm(req.POST)
+        form = StorageForm(req.POST, req.FILES)
 
         if form.is_valid():
             # form.save()
@@ -33,7 +33,7 @@ def update_link(request, pk):
     link = Storage.objects.get(id=pk)
     updateForm = StorageForm(instance=link)
     if request.method == 'POST':
-        updateForm = StorageForm(request.POST, instance=link)
+        updateForm = StorageForm(request.POST, request.FILES, instance=link)
         if updateForm.is_valid():
             updateForm.save()
             return redirect('/storage/')
@@ -44,4 +44,4 @@ def update_link(request, pk):
 def delete_link(req, pk):
     link = Storage.objects.get(id=pk)
     link.delete()
-    return redirect('/')
+    return redirect('/storage/')

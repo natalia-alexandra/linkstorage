@@ -9,10 +9,9 @@
     <div class="storage" id="link">
         <div class="link_cover">
             {% if link.cover %}
-            <img src="{{link.cover.url}}" alt="{{link.alt}}" width="350" class="link_img">
+            <img src="{{link.cover.url}}" alt="{{link.alt}}" width="300" class="link_img">
             {% else %}
-            <img src="{% static './assets/default-img.jpg' %}" alt="default image available" width="280"
-                class="link_img" />
+            <img src="{{link.cover_url}}" alt="{{link.alt}}" width="300" class="link_img">
             {% endif %}
         </div>
         <div class="link_content">

@@ -22,8 +22,10 @@ class Storage(models.Model):
     description = models.TextField(blank=True)
     # link_path = models.URLField(max_length=250, unique=True)
     link_path = models.CharField(max_length=250)
-    cover = models.ImageField(upload_to='assets/', blank=True)
-    cover_url = models.CharField(max_length=500, default=None, blank=True)
+    cover = models.ImageField(
+        upload_to='assets/', blank=True,  default="assets/default-img.jpg")
+    cover_url = models.CharField(
+        max_length=500,  default="assets/default-img.jpg", blank=True)
     alt = models.CharField(max_length=255)
     category = models.ForeignKey(Category, related_name='category',
                                  null=True, on_delete=models.CASCADE)
