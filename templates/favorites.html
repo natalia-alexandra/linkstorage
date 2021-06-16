@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block body_block %}
+<div class="container favorite_container">
+    <h2>favorites</h2>
+
+    {% for favorite in favorites.all %}
+    <div class="fav_box">
+        <a href="{{favorite.link_path}}" target="_blank" class="link_path" rel="noopener noreferrer">
+            <i class="fas fa-external-link-alt icon_link"></i>
+            {{ favorite.title }}
+        </a>
+        {% empty %}
+        <p>no favorites</p>
+    </div>
+    {% endfor %}
+
+</div>
+{% endblock %}

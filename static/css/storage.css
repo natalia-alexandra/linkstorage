@@ -97,3 +97,40 @@
 .msg a:hover {
     color: rgba(65, 105, 165, 0.8);
 }
+
+/* favorites */
+.favorite_container {
+    width: 80vw;
+    margin: 0 auto;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    color: rgb(32, 32, 32);
+    background-color: rgb(250, 250, 250);
+    border-radius: 5px;
+}
+.favorite_container h2 {
+    padding: 1rem 0;
+    font-weight: bold;
+}
+.fav_box {
+    min-width: 50vw;
+    margin: 1rem;
+    padding: 1rem;
+    background-color: rgb(228, 226, 226);
+    border-radius: 5px;
+}
+.fav_box a {
+    font-weight: bold;
+    text-decoration: none;
+    color: rgb(32, 32, 32);
+}
+.fav_box a:hover {
+    color: rgba(65, 105, 165, 0.8);
+}
+.icon_link {
+    padding-right: 0.7rem;
+    color: rgb(32, 32, 32);
+}

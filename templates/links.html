@@ -31,9 +31,12 @@
                 <a class='btn btn-primary' href="{% url 'delete_link' pk=link.pk %}">
                     <i class="fas fa-trash-alt"></i> delete
                 </a>
-                <a class='btn btn-primary' href="{% url 'delete_link' pk=link.pk %}">
-                    <i class="fas fa-star"></i> favorite
-                    <span class="glyphicon glyphicon-remove"></span>
+                <a class='btn btn-primary' href="{% url 'favorite_link' pk=link.pk %}">
+                    {% if is_favorite %}
+                    <i class="fas fa-heart"></i> favorited
+                    {% else %}
+                    <i class="fas fa-heart-broken"></i>
+                    {% endif %}
                 </a>
             </div>
             {% endif %}
